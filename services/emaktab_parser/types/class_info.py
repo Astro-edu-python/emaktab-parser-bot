@@ -3,9 +3,13 @@ from dataclasses import dataclass
 
 @dataclass
 class Pupil:
-    last_name: str
     first_name: str
+    last_name: str
     surname: str | None = None
+
+    @property
+    def full_name(self) -> str:
+        return f'{self.surname} {self.first_name} {self.surname}'
 
 
 @dataclass

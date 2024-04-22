@@ -19,4 +19,4 @@ class Schedule:
 
     @property
     def lessons_count(self):
-        return len(self.lessons)
+        return sum([len(lesson) for lesson in self.lessons])
